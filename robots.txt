@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://renatazawicka-glitch.github.io/Lovis/sitemap.xml
