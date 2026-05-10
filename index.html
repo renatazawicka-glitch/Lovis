@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lovis — Book musicians in Poland</title>
+  <meta name="description" content="Lovis — book talented musicians and bands across Poland for weddings, parties, corporate events and more." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%B5%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="Lovis home">
+      <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
+        <path fill="#E11D48" d="M16 29s-11-7.2-11-15.5A6.5 6.5 0 0 1 16 9a6.5 6.5 0 0 1 11 4.5C27 21.8 16 29 16 29z"/>
+      </svg>
+      <span>lovis</span>
+    </a>
+
+    <nav class="top-nav" aria-label="Primary">
+      <button class="nav-pill active" data-tab="musicians">
+        <span class="nav-emoji">🎤</span> Musicians
+      </button>
+      <button class="nav-pill" data-tab="bands">
+        <span class="badge">NEW</span>
+        <span class="nav-emoji">🎸</span> Bands
+      </button>
+      <button class="nav-pill" data-tab="djs">
+        <span class="badge">NEW</span>
+        <span class="nav-emoji">🎧</span> DJs
+      </button>
+    </nav>
+
+    <div class="header-right">
+      <a class="ghost-link" href="join.html">Become a musician</a>
+      <button class="icon-btn" aria-label="Language">🌐</button>
+      <button class="icon-btn menu-btn" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <form class="search-bar" id="searchBar" onsubmit="return Lovis.runSearch(event)">
+      <label class="search-field">
+        <span class="field-label">Where</span>
+        <input type="text" id="qWhere" placeholder="Search cities in Poland" autocomplete="off" />
+      </label>
+      <span class="divider"></span>
+      <label class="search-field">
+        <span class="field-label">When</span>
+        <input type="date" id="qWhen" />
+      </label>
+      <span class="divider"></span>
+      <label class="search-field">
+        <span class="field-label">Who</span>
+        <input type="text" id="qWho" placeholder="Add event type" autocomplete="off" />
+      </label>
+      <button class="search-btn" type="submit" aria-label="Search">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+    </form>
+  </section>
+
+  <main class="container">
+    <section class="row-section">
+      <header class="row-header">
+        <h2>Popular musicians in Warsaw</h2>
+        <div class="row-controls">
+          <button class="round-btn" aria-label="Scroll left" onclick="Lovis.scrollRow('warsawRow', -1)">‹</button>
+          <button class="round-btn" aria-label="Scroll right" onclick="Lovis.scrollRow('warsawRow', 1)">›</button>
+        </div>
+      </header>
+      <div class="card-row" id="warsawRow"></div>
+    </section>
+
+    <section class="row-section">
+      <header class="row-header">
+        <h2>Top-rated bands in Kraków</h2>
+        <div class="row-controls">
+          <button class="round-btn" aria-label="Scroll left" onclick="Lovis.scrollRow('krakowRow', -1)">‹</button>
+          <button class="round-btn" aria-label="Scroll right" onclick="Lovis.scrollRow('krakowRow', 1)">›</button>
+        </div>
+      </header>
+      <div class="card-row" id="krakowRow"></div>
+    </section>
+
+    <section class="row-section">
+      <header class="row-header">
+        <h2>DJs available across Poland</h2>
+        <div class="row-controls">
+          <button class="round-btn" aria-label="Scroll left" onclick="Lovis.scrollRow('djRow', -1)">‹</button>
+          <button class="round-btn" aria-label="Scroll right" onclick="Lovis.scrollRow('djRow', 1)">›</button>
+        </div>
+      </header>
+      <div class="card-row" id="djRow"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-cols">
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help centre</a></li>
+          <li><a href="#">Cancellation options</a></li>
+          <li><a href="#">Report a concern</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hosting</h4>
+        <ul>
+          <li><a href="join.html">Become a musician</a></li>
+          <li><a href="#">Resources for artists</a></li>
+          <li><a href="#">Community forum</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Lovis</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Newsroom</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Lovis sp. z o.o. · Warszawa, Poland</span>
+      <span><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Sitemap</a></span>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

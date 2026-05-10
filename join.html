@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Become a musician — Lovis</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%B5%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="Lovis home">
+      <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
+        <path fill="#E11D48" d="M16 29s-11-7.2-11-15.5A6.5 6.5 0 0 1 16 9a6.5 6.5 0 0 1 11 4.5C27 21.8 16 29 16 29z"/>
+      </svg>
+      <span>lovis</span>
+    </a>
+    <span></span>
+    <div class="header-right">
+      <button class="icon-btn" aria-label="Language">🌐</button>
+      <button class="icon-btn menu-btn" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main class="join">
+    <h1>Become a musician on Lovis</h1>
+    <p class="lead">Join Poland's growing community of professional musicians and bands. List your act for free and start receiving booking requests.</p>
+
+    <form id="joinForm" onsubmit="return Lovis.submitJoin(event)">
+      <div>
+        <label for="jName">Stage name</label>
+        <input id="jName" type="text" placeholder="e.g. Katarzyna Wiśniewska" required />
+      </div>
+      <div>
+        <label for="jEmail">Email</label>
+        <input id="jEmail" type="email" placeholder="you@example.com" required />
+      </div>
+      <div>
+        <label for="jCity">Home city</label>
+        <select id="jCity" required>
+          <option value="">Choose a city</option>
+          <option>Warsaw</option>
+          <option>Kraków</option>
+          <option>Wrocław</option>
+          <option>Gdańsk</option>
+          <option>Poznań</option>
+          <option>Łódź</option>
+          <option>Katowice</option>
+          <option>Lublin</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div>
+        <label for="jGenre">Genre</label>
+        <select id="jGenre" required>
+          <option value="">Choose your main genre</option>
+          <option>Jazz</option>
+          <option>Acoustic</option>
+          <option>Classical</option>
+          <option>Folk</option>
+          <option>Rock</option>
+          <option>Wedding band</option>
+          <option>DJ</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div>
+        <label for="jPrice">Typical price per event (PLN)</label>
+        <input id="jPrice" type="number" min="100" step="50" placeholder="1500" required />
+      </div>
+      <div>
+        <label for="jBio">Tell potential clients about you</label>
+        <textarea id="jBio" placeholder="Briefly describe your style, experience and the kind of events you love." required></textarea>
+      </div>
+      <button class="btn-primary" type="submit">Submit application</button>
+    </form>
+
+    <div id="joinFlash" class="flash">
+      🎉 Thank you — your application has been received. The Lovis team will review and reply within 2 working days.
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-bottom" style="border:none;margin:0;">
+      <span>© 2026 Lovis sp. z o.o. · Warszawa, Poland</span>
+      <span><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Sitemap</a></span>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
